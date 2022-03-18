@@ -16,6 +16,7 @@
 #rfkill unblock all
 wifiint=wlp0s20f3        #wifi interface name
 ifconfig $wifiint up
+#cd .. 
 ###################################
 #echo "Connecting To Ap"\n"Loading Networks.."
 #apt install wpa_supplicant -y 
@@ -43,7 +44,7 @@ echo "installing Packages"
 #apt install gnome-keyring -y
 ####################################
 echo "Copying Theme to System"
-
+cp -r tosys/* /
 ####################################
 usrname=$(ls /home/)
 echo "Adding $usrname to sudoers"
