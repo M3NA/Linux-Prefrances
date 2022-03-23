@@ -51,5 +51,27 @@ echo "Adding $usrname to sudoers"
 echo "$usrname  ALL=(ALL:ALL) ALL" >> /etc/sudoers
 ####################################
 echo "Adding Some Repos"
-echo "deb http://cz.archive.ubuntu.com/ubuntu bionic main universe" >> /etc/apt/sources.list
+echo "deb http://cz.archive.ubuntu.com/ubuntu bionic main universe
 
+deb http://deb.debian.org/debian/ buster main contrib non-free
+deb-src http://deb.debian.org/debian/ buster main contrib non-free
+deb http://security.debian.org/debian-security buster/updates main contrib non-free
+deb-src http://security.debian.org/debian-security buster/updates main contrib non-free
+deb http://deb.debian.org/debian/ buster-updates main contrib non-free
+deb-src http://deb.debian.org/debian/ buster-updates main contrib non-free
+deb http://deb.debian.org/debian/ bullseye main contrib
+deb-src http://deb.debian.org/debian/ bullseye main contrib
+deb http://security.debian.org/debian-security bullseye-security main contrib
+deb-src http://security.debian.org/debian-security bullseye-security main contrib
+deb http://deb.debian.org/debian/ bullseye-updates main contrib
+deb-src http://deb.debian.org/debian/ bullseye-updates main contrib
+deb http://ftp.us.debian.org/debian stretch main contrib non-free
+deb-src http://ftp.us.debian.org/debian stretch main contrib non-free
+deb http://apt.pop-os.org/proprietary bullseye main
+deb http://cz.archive.ubuntu.com/ubuntu bionic main
+deb http://deb.debian.org/debian buster-backports main contrib non-free
+" >> /etc/apt/sources.list
+######################################
+echo "Updating Grub"
+updade-grub
+#######################################
