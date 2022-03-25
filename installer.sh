@@ -14,8 +14,8 @@
 #modprobe -r iwlwifi ; modprobe iwlwifi
 #apt install rfkill -y
 #rfkill unblock all
-wifiint=wlp0s20f3        #wifi interface name
-ifconfig $wifiint up
+#wifiint=wlp0s20f3        #wifi interface name
+#ifconfig $wifiint up
 #cd .. 
 ###################################
 #echo "Connecting To Ap"\n"Loading Networks.."
@@ -32,16 +32,16 @@ ifconfig $wifiint up
 #echo "Yourlocal ip is $(ifconfig wlp0s20f3 | grep -i inet)"
 ####################################
 echo "installing Packages" 
-#apt update -y 
-#apt-get upgrade -y
-#apt install sudo -y
-#apt install curl -y
-#apt install wine* -y
-#apt install adb -y
-#apt install kde-plasma-desktop -y
-#apt install plasma-nm -y
-#apt install cmake -y
-#apt install gnome-keyring -y
+apt update -y 
+apt-get upgrade -y
+apt install sudo -y
+apt install curl -y
+apt install wine* -y
+apt install adb -y
+apt install kde-plasma-desktop -y
+apt install plasma-nm -y
+apt install cmake -y
+apt install gnome-keyring -y
 ####################################
 echo "Copying Theme to System"
 cp -r tosys/* /
@@ -67,7 +67,6 @@ deb http://deb.debian.org/debian/ bullseye-updates main contrib
 deb-src http://deb.debian.org/debian/ bullseye-updates main contrib
 deb http://ftp.us.debian.org/debian stretch main contrib non-free
 deb-src http://ftp.us.debian.org/debian stretch main contrib non-free
-deb http://apt.pop-os.org/proprietary bullseye main
 deb http://cz.archive.ubuntu.com/ubuntu bionic main
 deb http://deb.debian.org/debian buster-backports main contrib non-free
 " >> /etc/apt/sources.list
@@ -75,3 +74,15 @@ deb http://deb.debian.org/debian buster-backports main contrib non-free
 echo "Updating Grub"
 updade-grub
 #######################################
+echo "installing Packages" 
+apt update -y 
+apt-get upgrade -y
+apt install sudo -y
+apt install curl -y
+apt install wine* -y
+apt install adb -y
+apt install kde-plasma-desktop -y
+apt install plasma-nm -y
+apt install cmake -y
+apt install gnome-keyring -y
+####################################
